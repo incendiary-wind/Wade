@@ -1,0 +1,21 @@
+
+<p>
+  Tasks
+</p>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+  <tr>
+  <td class="mdl-data-table__cell--non-numeric" *ngFor="let n of tas">
+ {{ n.title }}</td> </tr>
+ <tr>
+ <td class="mdl-data-table__cell--non-numeric" *ngFor="let s of status">
+    <p *ngIf="s.title == 'Выполнено'">
+   Поздравляем с выполнением задачи
+      </p>
+      <p *ngIf="s.title != 'Выполнено'">
+          Задача не выполнена
+      </p>
+</td>
+    </tr>
+    </thead>
+</table>
