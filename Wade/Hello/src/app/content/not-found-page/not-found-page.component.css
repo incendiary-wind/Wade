@@ -1,0 +1,7 @@
+.error
+{
+    background-image: url('.src/../404-not-found-error-404.jpg');
+    text-align: left;
+    font-size: 20pt;
+    padding-top: 44%;
+}

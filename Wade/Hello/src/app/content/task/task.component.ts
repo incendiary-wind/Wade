@@ -5,7 +5,6 @@ templateUrl: './task.component.html',
 styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
-//tas: Array<any>;
 
 tas: Model.Task[];
 status: Model.TaskStatus[];
@@ -38,20 +37,8 @@ constructor() {
   }
   ];
 }
-ngOnInit() {/*
-this.tas = this.getTask();
-console.log(this.tas);
-}
-getTask() {
-      return [
-          {
-           id: 1,
-           title: 'Cleaning',
-           descrption: 'None',
-           statusId: 1,
-           deadline: new Date(2017, 8, 26)
-          }
-     ];
-}*/
+ngOnInit() {
+
+
 }
 }
