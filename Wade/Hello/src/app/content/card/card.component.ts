@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import * as Model from '../../model/model'; 
+import { BackendService } from '../../services/backend.service';
 
 @Component({
   selector: 'app-card',
@@ -11,52 +11,16 @@ export class CardComponent implements OnInit {
 //tas: Model.Task[];
   //  status: Model.TaskStatus[];
 
-  //cards: Model.Card[];
-    constructor() {
-  /*
-      this.cards = [
-        {
-          id: 1,
-          units: 'штуки',
-          cost: 
-          datezap: 
-          docnumber::
-          controll:
-          status:
+cards: Model.CArdExp[];
+minLength: number = 3;
+warehouses: Model.Warehouse[];
 
-        }
-      ];
-    this.tas = [
-        {
-          id: 1,
-          title: 'Cleaning',
-          descrption: 'None',
-          statusId: 1,
-          deadline: new Date(2017, 8, 26)
-        },
-        {
-          id: 1,
-          title: 'Washing up',
-          descrption: 'None',
-          statusId: 2,
-          deadline: new Date(2017, 8, 26)
-        },
-      ];
-    
-      this.status = [
-        {
-        id: 1,
-        title: 'Не выполнено'
-      },
-      {
-        id: 2,
-        title: 'Выполнено'
+
+
+  constructor(private backend: BackendService) {
+    }
+      ngOnInit() {
+        this.backend.getWarehouses()
+        .subscribe((data: Model.Warehouse[]) => this.warehouses = data);
       }
-      ];*/
-   }
-
-  ngOnInit() {
-  
-  }
-
 }

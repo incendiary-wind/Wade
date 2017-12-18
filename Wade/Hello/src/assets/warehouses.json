@@ -1,0 +1,61 @@
+﻿{
+ "warehouses": [
+ {
+"id": 1,      
+"warehouseName": "Warehouse1",
+"active": true,
+"note": "Private Warehouse" 
+},
+{
+"id": 2,     
+"warehouseName": "Warehouse2",
+"active": false
+},
+{
+"id": 3,
+"warehouseName": "Warehouse3",
+"active": true,
+"note": "Automated Warehouse"
+},
+{   
+"id": 4,    
+"warehouseName": "Warehouse4",
+"active": true,
+"note": "Distribution Center"
+   },
+{
+"id": 5,    
+"warehouseName": "Warehouse5",
+"active": false,
+"note": "Climate-Controlled Warehouse"
+   },
+{
+"id": 6,    
+"warehouseName": "Warehouse6",
+"active": true,
+"note": "Automated Warehouse"
+   },
+{
+"id": 7,    
+"warehouseName": "Warehouse7",
+"active": true,
+"note": "Public Warehouse"
+   },
+{
+"id": 8,    
+"warehouseName": "Warehouse8",
+"active": false
+   },
+{
+"id": 9,    
+"warehouseName": "Warehouse9",
+"active": true
+   },
+{
+"id": 10,
+"warehouseName": "Warehouse10",    
+"active": true,
+"note": "Climate-Controlled Warehouse"
+   }
+]
+}

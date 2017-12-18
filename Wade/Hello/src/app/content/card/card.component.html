@@ -1,21 +1,39 @@
 <div class="mdl-grid demo-content">
     <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-    <thead>
-  <tr>
-  <td class="mdl-data-table__cell--non-numeric" *ngFor="let n of tas">
- {{ n.title }}</td> </tr>
- <tr>
- <td class="mdl-data-table__cell--non-numeric" *ngFor="let s of status">
-    <p *ngIf="s.title == 'Выполнено'">
-   Поздравляем с выполнением задачи
-      </p>
-      <p *ngIf="s.title != 'Выполнено'">
-          Задача не выполнена
-      </p>
-</td>
-    </tr>
-    </thead>
-</table>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+       
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search" [(ngModel)]="search" [minlength]="minLength">
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+           </div>
+                                <ul>
+                <li *ngFor="let warehouse of warehouses | filter:search">
+              <a href="#">{{warehouse.name}} </a></li>
+              </ul> 
+           
+  <!--
+             
+                    <ng-template ngFor let-item [ngForOf]="reportClasses"> 
+                        <th *ngIf="isReportClassShown(item.id)">
+                            <span>{{ item.start | date:'dd.MM' }}</span><br>
+                            <span>{{ item.classKind }}</span>
+                        </th>
+                    </ng-template>
+                    <th>Total</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students">
+                        <td>{{student.lastName}}, {{student.firstName}}</td>
+                        <ng-template ngFor let-attendance [ngForOf]="student.attendances"> 
+                            <td *ngIf="isReportClassShown(attendance.classId)">{{ attendance.hours | attendance:'н':':' }}</td>
+                        </ng-template>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+  </div>-->
 </div>
 </div>
